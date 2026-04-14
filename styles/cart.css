@@ -98,10 +98,13 @@ html, body {
     text-align: center;
   }
 
+  .quantity-controls {
+    gap: 30px;
+  }
+
   .btn-qty, .btn-remove {
     width: 80px;
     height: 80px;
     font-size: 3rem;
-    gap: 30px;
   }
 }
