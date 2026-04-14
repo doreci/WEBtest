@@ -12,12 +12,11 @@ function prikaziKosaricu() {
 
   // Naslov i tablica koriste klase iz cart.css
   let html = `
-        <div class="cart-title">KOŠARICA</div>
         <table class="cart-table">
             <thead>
                 <tr>
                     <th>NAZIV PROIZVODA</th>
-                    <th class="text-center">KOLIČINA</th>
+                    <th id="text-center">KOLIČINA</th>
                 </tr>
             </thead>
             <tbody>`;
