@@ -56,9 +56,23 @@ function prikaziKategorije() {
         productDisplay.appendChild(productCard);
 
         azurirajBadgeove(proizvod.name);
+        azurirajAktivnog();
       });
     });
     menuUl.appendChild(li);
+  });
+}
+
+function azurirajAktivnog() {
+  const menuItems = menuUl.querySelectorAll('li');
+  const currentCategory = document.querySelector('.current-category').textContent;
+
+  menuItems.forEach((item) => {
+    if (item.textContent === currentCategory) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
   });
 }
 
@@ -149,3 +163,4 @@ function prikaziKategoriju(imeKategorije) {
 prikaziKategorije();
 azurirajZaglavlje();
 prikaziKategoriju('Puder');
+azurirajAktivnog();

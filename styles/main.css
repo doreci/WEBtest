@@ -226,6 +226,11 @@ body {
   font-weight: bold;
 }
 
+.active {
+  font-weight: bold;
+  color: rgba(216, 27, 96, 0.8);
+}
+
 @media screen and (max-width: 1024px) {
   .main-header {
     display: grid;
