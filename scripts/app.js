@@ -45,17 +45,17 @@ function prikaziKategorije() {
         const nameWrapper = document.createElement('p');
         nameWrapper.textContent = proizvod.name;
 
-        const quantityBadge = document.createElement('span');
-        quantityBadge.className = 'product-quantity-badge';
+        const quantity = document.createElement('span');
+        quantity.className = 'product-quantity';
         const safeId = proizvod.name.replace(/\s+/g, '-');
-        quantityBadge.id = `qty-${safeId}`;
+        quantity.id = `qty-${safeId}`;
 
-        imgContainer.appendChild(quantityBadge);
+        imgContainer.appendChild(quantity);
         productCard.appendChild(imgContainer);
         productCard.appendChild(nameWrapper);
         productDisplay.appendChild(productCard);
 
-        azurirajBadgeove(proizvod.name);
+        azurirajBroj(proizvod.name);
         azurirajAktivnog();
       });
     });
@@ -86,7 +86,7 @@ function dodajUKosaricu(proizvod) {
 
   localStorage.setItem('cart', JSON.stringify(cart));
   azurirajZaglavlje();
-  azurirajBadgeove(proizvod.name);
+  azurirajBroj(proizvod.name);
 }
 
 function azurirajZaglavlje() {
@@ -100,16 +100,16 @@ function azurirajZaglavlje() {
   }
 }
 
-function azurirajBadgeove(imeProizvoda) {
+function azurirajBroj(imeProizvoda) {
   const postojeci = cart.find((item) => item.name === imeProizvoda);
   const safeId = imeProizvoda.replace(/\s+/g, '-');
-  const badge = document.getElementById(`qty-${safeId}`);
+  const quantity = document.getElementById(`qty-${safeId}`);
 
-  if (postojeci && badge) {
-    badge.textContent = `${postojeci.quantity}`;
-    badge.style.display = 'inline';
-  } else if (badge) {
-    badge.style.display = 'none';
+  if (postojeci && quantity) {
+    quantity.textContent = `${postojeci.quantity}`;
+    quantity.style.display = 'inline';
+  } else if (quantity) {
+    quantity.style.display = 'none';
   }
 }
 
@@ -146,16 +146,16 @@ function prikaziKategoriju(imeKategorije) {
 
       const nameWrapper = document.createElement('p');
       nameWrapper.textContent = proizvod.name;
-      const quantityBadge = document.createElement('span');
-      quantityBadge.className = 'product-quantity-badge';
+      const quantity = document.createElement('span');
+      quantity.className = 'product-quantity';
       const safeId = proizvod.name.replace(/\s+/g, '-');
-      quantityBadge.id = `qty-${safeId}`;
+      quantity.id = `qty-${safeId}`;
 
-      imgContainer.appendChild(quantityBadge);
+      imgContainer.appendChild(quantity);
       productCard.appendChild(imgContainer);
       productCard.appendChild(nameWrapper);
       productDisplay.appendChild(productCard);
-      azurirajBadgeove(proizvod.name);
+      azurirajBroj(proizvod.name);
     });
   }
 }
