@@ -1,0 +1,125 @@
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cart-table th {
+  background-color: #fce4ec;
+  color: #d81b60;
+  padding: 15px;
+  text-align: left;
+}
+
+.cart-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-qty {
+  background: #fce4ec;
+  border: none;
+  color: #d81b60;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-remove {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.cart-item-name {
+  font-weight: 600;
+}
+
+/* Postojeći stilovi koje si poslala */
+.cart-table {
+  width: 80%; /* Prema tvojoj skici tablica nije preko cijelog ekrana */
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border: 1px solid black; /* Crni rub prema skici */
+}
+
+.cart-table th {
+  background-color: #fce4ec;
+  color: #d81b60;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+.cart-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+/* NOVE KLASE ZA USKLAĐIVANJE S JS-OM */
+.cart-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: center; /* Centriranje gumbića u ćeliji */
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-number {
+  min-width: 20px;
+  display: inline-block;
+}
+
+.btn-qty {
+  background: #fce4ec;
+  border: 1px solid #d81b60;
+  color: #d81b60;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.empty-cart-msg {
+  text-align: center;
+  color: #888;
+  margin-top: 50px;
+}
+
+.cart-item-name {
+  font-weight: 600;
+}

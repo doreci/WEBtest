@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SPARKLE</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+
+  <body>
+    <div id="app-container">
+      <header class="main-header">
+        <div class="logo">SPARKLE</div>
+        <div class="current-category">Puder</div>
+        <div class="header-icons">
+          <a href="cart.html" class="cart-link">
+            <span class="cart-icon">🛒</span>
+          </a>
+          <span class="search-icon">🔍</span>
+        </div>
+      </header>
+
+      <div class="content-wrapper">
+        <aside class="sidebar">
+          <nav class="category-list">
+            <ul id="menu-categories"></ul>
+          </nav>
+
+          <nav class="extra-links">
+            <p>Kontakt</p>
+            <p>Newsletter</p>
+            <p>Pretplati se</p>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <div class="hero-section">
+            <div class="welcome-box">
+              <h2>Dobrodošli u SPARKLE!</h2>
+            </div>
+
+            <div class="hero-image-container">
+              <img src="assets/images/naslovna-slika.jpg" class="hero-image" />
+            </div>
+          </div>
+
+          <div id="product-display" class="product-grid"></div>
+        </main>
+      </div>
+    </div>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
